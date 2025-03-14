@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  mysql:
+    image: mysql:8.0.19
+    environment:
+      MYSQL_ROOT_PASSWORD: helloworld
+      MYSQL_DATABASE: KhanhDB
+    ports:
+      - "3308:3306"
+
+  ui:
+    build: .
+    image: semi-automatic
+    depends_on:
+      - mysql
+    environment:
+      BASIC_AUTH_USER: cs
+      BASIC_AUTH_PASS: cs
+      DB_USER: root
+      DB_PASSWORD: helloworld
+      HOST_DB: mysql
+      DB_PORT: 3306
+      FLASK_APP: app
