@@ -17,3 +17,17 @@ With the integration of Machine Learning, risk experts can use this application 
   - Invisible factors: User voting may be influenced by prior knowledge of the companies, as many cases and companies are already known to them. This bias affects the voting results.
 
 For future perspectives, we could develop comprehensive Machine Learning algorithms based on this work, to increase the performance and optimize the model. Also, the non-linearity properties of training data need to be deeply analyzed.
+
+---
+## 📁 Folder Structure
+
+1. **App UI**:  This is our main application. The application is built using Python frameworks of Dash and Flask.
+
+2. **App Screenshots**: The screenshots of our main application. 
+ 
+3. **Data Preparation**:
+  - Creating_company_pairs.sql: for cleansing and modifying Financial Dataset, then creating all possible company pairs for voting, each pairs will have a unique ID.
+  - pairs_grouping.py: after creating company pairs, group them into different group of n number of pairs, each group will have a unique ID. For each voting session a group of n pairs will be given to users to vote. After one voting session is finished, the next group will be given to users in the next session. 
+
+4. **Empirical Study with Real-World Data**: After collecting data from users, we start analyzing and building Machine Learning models.
+The two files "Data Analytics_02.ipynb" and "Risk Models - Machine Learning.ipynb" can be opened using Jupyter Notebook.
