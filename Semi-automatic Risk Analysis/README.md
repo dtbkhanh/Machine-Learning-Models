@@ -8,7 +8,7 @@ Traditional techniques for credit decision-making require lots of time and impli
 
 With the integration of Machine Learning, risk experts can use this application as a convenient tool for rapid cross-reference checking. It can produce ranking results in just a matter of seconds, significantly reducing the workload involved in data processing and speeding up decision-making processes.
 
-## Result summary:
+## 📝 Result summary:
 - In general, I have successfully built SVM and kNN models with an average accuracy of 78%.
 - The models are highly adaptable. The machine can learn and train on any information we input. The data features can be changed, added, or removed. The training and learning part of the model is fixed.
 - Although both models can achieve the same average accuracy, SVM is a better and more reliable choice than kNN. This is because kNN's results depend on the training set, and each different set requires a different chosen k-value to reach the best accuracy score. Additionally, as the dataset grows, kNN requires more memory and results in slower predictions since it is a lazy learner and needs to load the entire training dataset each time.
