@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<h1>Sign In</h1>
+<form action="" method="post" novalidate>
+  {{ form.hidden_tag() }}
+  <div class="form-group">
+    {{ form.usermail.label }}
+    {{ form.usermail(size=32) }}
+  </div>
+  <p>{{ form.submit() }}</p>
+  {% if error %}
+  <p class="error"><strong>Error:</strong> {{ error }}
+    {% endif %}
+</form>
+<p> New User? <a href="{{ url_for('login_blueprint.register') }}">Click to Register!</a></p>
+{% endblock %}
