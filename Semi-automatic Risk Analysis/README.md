@@ -13,8 +13,8 @@ With the integration of Machine Learning, risk experts can use this application 
 - The models are highly adaptable. The machine can learn and train on any information we input. The data features can be changed, added, or removed. The training and learning part of the model is fixed.
 - Although both models can achieve the same average accuracy, SVM is a better and more reliable choice than kNN. This is because kNN's results depend on the training set, and each different set requires a different chosen k-value to reach the best accuracy score. Additionally, as the dataset grows, kNN requires more memory and results in slower predictions since it is a lazy learner and needs to load the entire training dataset each time.
 - I'm unable to increase the accuracy further due to the following reasons:
-  - Lack of training data: With only 4 users taking the test, we have limited viewpoints and many data points are duplicated.
-  - Invisible factors: User voting may be influenced by prior knowledge of the companies, as many cases and companies are already known to them. This bias affects the voting results.
+  - **Lack of training data**: With only 4 users taking the test, we have limited viewpoints and many data points are duplicated.
+  - **Invisible factors**: User voting may be influenced by prior knowledge of the companies, as many cases and companies are already known to them. This bias affects the voting results.
 
 For future perspectives, we could develop comprehensive Machine Learning algorithms based on this work, to increase the performance and optimize the model. Also, the non-linearity properties of training data need to be deeply analyzed.
 
