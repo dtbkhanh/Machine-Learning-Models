@@ -6,7 +6,7 @@ This project analyzes COVID-19 patient data to predict key health outcomes using
 
 - **Classification:** Predict whether a patient will require **intubation, ICU admission, or survival**.  
 - **Regression:** Estimate **length of ICU stay and hospital stay duration**.  
-- **Dataset:** COVID-19 patient records with demographic and medical features.  
+- **Dataset:** [COVID-19 Dataset](https://www.kaggle.com/datasets/meirnizri/covid19-dataset/data) 
 - **Models Used:** Logistic Regression, Decision Tree, Random Forest, etc.  
 
 ## Notebooks
