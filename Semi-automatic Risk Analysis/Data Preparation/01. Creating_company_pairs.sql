@@ -19,14 +19,11 @@ ORDER BY company_id, dataset_year;
 -- Previews the first 4 characters of 'dataset_year' for entries longer than 4 characters.
 SELECT SUBSTR(dataset_year, 1, 4) FROM FinancialDataset_raw  WHERE LENGTH(dataset_year) > 4
 
--- Adds a new column 'year_khanh' to store the cleaned year data.
+-- Adds a new column to store the cleaned year data.
+-- Then updates it with 'dataset_year' for records that already have a valid 4-character year.
 ALTER TABLE FinancialDataset_raw ADD year_khanh varchar(100);
+UPDATE FinancialDataset_raw SET year_khanh = dataset_year WHERE LENGTH(dataset_year) = 4; -- 1654 rows
 
--- Updates 'year_khanh' with 'dataset_year' for records that already have a valid 4-character year.
-UPDATE FinancialDataset_raw  SET year_khanh = dataset_year WHERE LENGTH(dataset_year) = 4; -- 1654 rows
-
--- Updates 'year_khanh' by extracting the first 4 characters for records with invalid length,
--- excluding a specific problematic entry ('20,13').
 UPDATE FinancialDataset_raw SET year_khanh = SUBSTR(dataset_year, 1, 4) 
 WHERE LENGTH(dataset_year) <> 4 AND dataset_year != '20,13'; -- 73 rows
 
